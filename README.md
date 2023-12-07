@@ -17,12 +17,13 @@ The agent utilizes the following modules:
 
 Additional [core][corepkg] modules was created to provide high levels of reliability and visibailty for AI Agent architectures.
 
-Messaging was developmented to provied ease of interactions between a network of heterogenous agents, working together satisify the goals of an AI Agent.
+[Messaging][messagingpkg] was developmented to provied ease of interactions between a network of heterogenous agents, working together satisify the goals of an AI Agent.
 
 
 
 [aima]: <https://aima.cs.berkeley.edu/>
 [corepkg]: <https://pkg.go.dev/github.com/advanced-go/core>
+[messagingpkg]: <https://pkg.go.dev/github.com/advanced-go/messaging>
 
 ### Hi there 👋
 
