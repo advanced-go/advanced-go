@@ -1,17 +1,8 @@
 # Advanced Go
 
-[Artificial Intelligence: A Modern Approach][aima]
+Advanced Go is an exercise in development of architectures to facilitate the development of AI Agents. Inspiration for the AI Agent architecture is defined in the AI text book by [Stewart Russell & Peter Norvig][aima].  
 
-What follows is a description of the packages in Core, highlighting specific patterns and template implementations.  
 
-[emuller]: <https://www.youtube.com/watch?v=ltqV6pDKZD8>
-[rgriesemer]: <https://www.youtube.com/watch?v=0ReKdcpNyQg>
-[rpike]:  <https://go-proverbs.github.io/>
-[kbeck]: <https://www.oreilly.com/library/view/test-driven-development/0321146530/>
-[dmcilroy]: <https://en.wikipedia.org/wiki/Unix_philosophy>
-[runix]: <https://en.wikipedia.org/wiki/Research_Unix>
-[tutorialspoint]: <https://www.tutorialspoint.com/cplusplus/cpp_templates.htm>
-[boost]: <https://www.boost.org/>
 [aima]: <https://aima.cs.berkeley.edu/>
 
 ### Hi there 👋
