@@ -22,7 +22,7 @@ Messaging was developmented to provied ease of interactions between a network of
 
 
 [aima]: <https://aima.cs.berkeley.edu/>
-[corepkg]: <https://gituhb.com/advanced-go/core/>
+[corepkg]: <https://pkg.go.dev/github.com/advanced-go/core>
 
 ### Hi there 👋
 
