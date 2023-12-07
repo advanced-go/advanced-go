@@ -6,7 +6,7 @@ An agent is anything that can be viewed as perceiving its environment through se
 through effectors. 
 ~~~
 
-The AI Agent developed implements an observation -> analyze -> act cycle 
+The AI Agent developed implements an observation -> analyze -> act cycle focused on autonomous 
 
 The agent utilizes the following modules:
 
@@ -15,9 +15,14 @@ The agent utilizes the following modules:
 3. example-host - a service host for the AI Agent
 4. example-test - a test application used to send timeseries and SLO data to the service host.
 
+Additional [core][corepkg] modules was created to provide high levels of reliability and visibailty for AI Agent architectures.
+
+Messaging was developmented to provied ease of interactions between a network of heterogenous agents, working together satisify the goals of an AI Agent.
+
 
 
 [aima]: <https://aima.cs.berkeley.edu/>
+[corepkg]: <https://gituhb.com/advanced-go/core/>
 
 ### Hi there 👋
 
