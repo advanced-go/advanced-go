@@ -25,9 +25,10 @@ Additional [core][corepkg] modules was created to provide high levels of reliabi
 [corepkg]: <https://pkg.go.dev/github.com/advanced-go/core>
 [messagingpkg]: <https://pkg.go.dev/github.com/advanced-go/messaging>
 
+<!--
 ### Hi there 👋
 
-<!--
+
 **advanced-go/advanced-go** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
 Here are some ideas to get you started:
