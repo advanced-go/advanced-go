@@ -1,10 +1,18 @@
 # Advanced Go
 
-Advanced Go is an exercise in development of architectures to facilitate the development of AI Agents. Inspiration for the AI Agent architecture is defined in the AI text book by [Stewart Russell & Peter Norvig][aima]. The textbook defines an AI Agent as follows:
+Advanced Go is an exercise in development of architectures to facilitate the development of AI Agents. Inspiration for the AI Agent architecture is defined in the AI text book by [Stuart Russell & Peter Norvig][aima]. The textbook defines an AI Agent as follows:
 ~~~
 An agent is anything that can be viewed as perceiving its environment through sensors and acting upon that environment
 through effectors. 
 ~~~
+
+The AI Agent developed implements an observation -> analyze -> act cycle 
+
+The agent utilizes the following modules:
+
+1. example-domain - resources used by the agent to query timeseries access log and SLO data, and to create an agent activity audit trail
+2. example-host - a service host for the AI Agent
+3. example-test - a test application used to send timeseries and SLO data to the service host.
 
 [aima]: <https://aima.cs.berkeley.edu/>
 
