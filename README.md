@@ -2,7 +2,7 @@
 
 Advanced Go is an exercise in development of architectures to facilitate the development of AI Agents. Inspiration for the AI Agent architecture is defined in the AI text book by [Stewart Russell & Peter Norvig][aima]. The textbook defines an AI Agent as follows:
 ~~~
-An agent is anything that can be viewed as perceiving its environmentthrough sensors and acting upon that environment
+An agent is anything that can be viewed as perceiving its environment through sensors and acting upon that environment
 through effectors. 
 ~~~
 
