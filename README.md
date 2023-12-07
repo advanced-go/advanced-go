@@ -10,9 +10,12 @@ The AI Agent developed implements an observation -> analyze -> act cycle
 
 The agent utilizes the following modules:
 
-1. example-domain - resources used by the agent to query timeseries access log and SLO data, and to create an agent activity audit trail
-2. example-host - a service host for the AI Agent
-3. example-test - a test application used to send timeseries and SLO data to the service host.
+1. example-agent - resiliency agent implementation
+2. example-domain - resources used by the agent: timeseries access log, SLO, and an agent activity audit trail
+3. example-host - a service host for the AI Agent
+4. example-test - a test application used to send timeseries and SLO data to the service host.
+
+
 
 [aima]: <https://aima.cs.berkeley.edu/>
 
