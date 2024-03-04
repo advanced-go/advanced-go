@@ -18,7 +18,7 @@ Additional [core][corepkg] modules was created to provide high levels of reliabi
 
 
 [aima]: <https://aima.cs.berkeley.edu/>
-[runtimepkg]: <https://pkg.go.dev/github.com/advanced-go/core/runtime>
+[runtimepkg]: <https://pkg.go.dev/github.com/advanced-go/core/runtime#ErrorHandler>
 [messagingpkg]: <https://pkg.go.dev/github.com/advanced-go/messaging>
 [packagepkg]: <https://pkg.go.dev/github.com/advanced-go/example-domain/service>
 
