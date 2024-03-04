@@ -12,7 +12,6 @@ A key concept of REST is the uniform inerface. A [package's][domainservice] Http
 
 
 
-Additional [core][corepkg] modules was created to provide high levels of reliability and visibailty for AI Agent architectures.
 
 [Messaging][messagingpkg] was developmented to provied ease of interactions between a network of heterogenous agents, working together satisify the goals of an AI Agent.
 
