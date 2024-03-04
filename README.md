@@ -6,7 +6,8 @@ Advanced Go is an exercise in creating a new software engineering paradigm that 
 A key concept of REST is the uniform inerface. A [package's][domainservice] HttpHandler implements that uniform interaface, and allows easy integration with other package, either in process or via HTTP. A package also includes a PkgPath that can be used as an identifier
 
 [Error handling][errorhandler] also benefits from a uniform interface, allowing [generice type's][loghandler] for implementation. 
-Access logging also has a uniform Log function.  
+
+[Access logging][logger] also has a uniform Log function.  
 
 
 
@@ -22,6 +23,7 @@ Additional [core][corepkg] modules was created to provide high levels of reliabi
 [loghandler]: <https://pkg.go.dev/github.com/advanced-go/core/runtime#Log>
 [messagingpkg]: <https://pkg.go.dev/github.com/advanced-go/messaging>
 [domainservice]: <https://pkg.go.dev/github.com/advanced-go/example-domain/service>
+[logger]: <https://pkg.go.dev/github.com/advanced-go/core/access>
 
 <!--
 ### Hi there 👋
