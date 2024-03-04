@@ -17,8 +17,9 @@ REST defines a layered architecture style where RESTful components can be easily
 [Messaging][messagingpkg] was developmented to provied ease of interactions between a network of heterogenous agents, working together satisify the goals of an AI Agent.
 
 
+## Testing
 
-[aima]: <https://aima.cs.berkeley.edu/>
+## Application Development
 [errorhandler]: <https://pkg.go.dev/github.com/advanced-go/core/runtime#ErrorHandler>
 [loghandler]: <https://pkg.go.dev/github.com/advanced-go/core/runtime#Log>
 [messagingpkg]: <https://pkg.go.dev/github.com/advanced-go/messaging>
