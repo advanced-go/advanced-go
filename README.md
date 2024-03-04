@@ -1,19 +1,11 @@
 # Advanced Go
 
-Advanced Go is an exercise in development of architectures to facilitate the development of AI Agents. Inspiration for the AI Agent architecture is defined in the AI text book by [Stuart Russell & Peter Norvig][aima]. The textbook defines an AI Agent as follows:
-~~~
-An agent is anything that can be viewed as perceiving its environment through sensors and acting upon that environment
-through effectors. 
-~~~
+Advanced Go is an exercise in creating a new software engineering paradigm that would streamline application development, improve testing efficacy, and alleviate some of the things that are hard to change with a microservices architecture. This solution to creating a new paradigm was extending REST from the service/HTTP layer to the application layer. What follows are the implementation details of a new software engineering paradigm.
 
-The AI Agent developed implements an observation -> analyze -> act cycle focused on autonomous 
+## REST Uniform Interface
 
-The agent utilizes the following modules:
 
-1. example-agent - resiliency agent implementation
-2. example-domain - resources used by the agent: timeseries access log, SLO, and an agent activity audit trail
-3. example-host - a service host for the AI Agent
-4. example-test - a test application used to send timeseries and SLO data to the service host.
+
 
 Additional [core][corepkg] modules was created to provide high levels of reliability and visibailty for AI Agent architectures.
 
