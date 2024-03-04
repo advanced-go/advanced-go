@@ -24,7 +24,7 @@ REST defines a layered architecture style where RESTful components can be easily
 [messagingpkg]: <https://pkg.go.dev/github.com/advanced-go/messaging>
 [domainservice]: <https://pkg.go.dev/github.com/advanced-go/example-domain/service>
 [logger]: <https://pkg.go.dev/github.com/advanced-go/core/access#Log>
-[intermediary]: <https://pkg.go.dev/github.com/advanced-go/core/host#ServeHTTP>
+[intermediary]: <https://pkg.go.dev/github.com/advanced-go/core/host#ServeHTTPFunc>
 
 <!--
 ### Hi there 👋
