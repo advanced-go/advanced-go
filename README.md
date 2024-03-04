@@ -23,7 +23,7 @@ Additional [core][corepkg] modules was created to provide high levels of reliabi
 [loghandler]: <https://pkg.go.dev/github.com/advanced-go/core/runtime#Log>
 [messagingpkg]: <https://pkg.go.dev/github.com/advanced-go/messaging>
 [domainservice]: <https://pkg.go.dev/github.com/advanced-go/example-domain/service>
-[logger]: <https://pkg.go.dev/github.com/advanced-go/core/access>
+[logger]: <https://pkg.go.dev/github.com/advanced-go/core/access#Log>
 
 <!--
 ### Hi there 👋
