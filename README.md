@@ -5,7 +5,7 @@ Advanced Go is an exercise in creating a new software engineering paradigm that 
 ## REST Uniform Interface & Resource Identifier
 A key concept of REST is the uniform inerface. A [package's][packagepkg] HttpHandler implements that uniform interaface, and allows easy integration with other package, either in process or via HTTP. A package also includes a PkgPath that can be used as an identifier
 
-[Error handling][corepkg] also benefits from a uniform interface, adding a generice type for implementation. 
+[Error handling][runtimepkg] also benefits from a uniform interface, adding a generice type for implementation. 
 Access logging also has a uniform Log function.  
 
 
@@ -18,7 +18,7 @@ Additional [core][corepkg] modules was created to provide high levels of reliabi
 
 
 [aima]: <https://aima.cs.berkeley.edu/>
-[corepkg]: <https://pkg.go.dev/github.com/advanced-go/core>
+[runtimepkg]: <https://pkg.go.dev/github.com/advanced-go/core/runtime>
 [messagingpkg]: <https://pkg.go.dev/github.com/advanced-go/messaging>
 [packagepkg]: <https://pkg.go.dev/github.com/advanced-go/example-domain/service>
 
