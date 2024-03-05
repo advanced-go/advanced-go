@@ -9,9 +9,10 @@ A key concept of REST is the uniform inerface. A [package's][domainservice] Http
 
 [Access logging][logger] also has a uniform Log function.  
 
-
 ## REST Intermediaries
 REST defines a layered architecture style where RESTful components can be easily connected via HTTP. Service authenticaion/authorization functionality is implemented by adding an [intermediary][intermediary].
+
+## URL as a Resource
 
 ## Testing
 Testing utilizes a package's HttpHandler to test all requests and related responses. The requests and responses are HTTP text files, deserialized from disk into the appropriate [http.Request][httprequest] and [http.Response][httpresponse] types. This allows an automated, easy to extend solution for testing. Since the package HttpHandler is the public interface for the package, no further testing of the package needs to be done in a host.  
