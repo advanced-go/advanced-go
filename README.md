@@ -5,7 +5,7 @@ Advanced Go is an exercise in creating a new software engineering paradigm that 
 ## REST Uniform Interface, Resource Identifier, & Self-Descriptive Messages
 A key concept of REST is the uniform inerface. A [package's][domainservice] HttpHandler implements that uniform interaface, uses the http.Request type and allows easy integration with other packages. A package also includes a PkgPath that is used as an identifier
 
-The [messaging][messagingcode] package provides a uniform interface, self-descriptive message, and resource identification for communication between resources
+The [messaging][messagingcore] package provides a uniform interface, self-descriptive message, and resource identification for communication between resources
 using goroutines and gochannels. Functionality supported by messaging include startup, shutdown, and package health check.
 
 [Error handling][errorhandler] also benefits from a uniform interface, allowing [generice type's][loghandler] for implementation. 
