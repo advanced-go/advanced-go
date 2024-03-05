@@ -14,7 +14,7 @@ A key concept of REST is the uniform inerface. A [package's][domainservice] Http
 REST defines a layered architecture style where RESTful components can be easily connected via HTTP. Service authenticaion/authorization functionality is implemented by adding an [intermediary][intermediary].
 
 ## Testing
-Testing utilizes a package's HttpHandler to test all requests and related responses. The requests and responses are deserialized from disk into  the appropriate [http.Request][httprequest] and http.Response types. This allows an automated, easy to extend solution for testing. Since the package HttpHandler is the public interface for the package, no further testing of the package needs to be done in a host.  
+Testing utilizes a package's HttpHandler to test all requests and related responses. The requests and responses are HTTP text files, deserialized from disk into the appropriate [http.Request][httprequest] and [http.Response][httpresponse] types. This allows an automated, easy to extend solution for testing. Since the package HttpHandler is the public interface for the package, no further testing of the package needs to be done in a host.  
 
 ## Application Development
 [Messaging][messagingpkg] was developmented to provied ease of interactions between a network of heterogenous agents, working together satisify the goals of an AI Agent.
@@ -27,6 +27,7 @@ Testing utilizes a package's HttpHandler to test all requests and related respon
 [logger]: <https://pkg.go.dev/github.com/advanced-go/core/access#Log>
 [intermediary]: <https://pkg.go.dev/github.com/advanced-go/core/host#ServeHTTPFunc>
 [httprequest]: <https://pkg.go.dev/net/http#Request>
+[httpresponse]: <https://pkg.go.dev/net/http#Response>
 
 <!--
 ### Hi there 👋
