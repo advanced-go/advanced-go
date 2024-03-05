@@ -25,7 +25,7 @@ Testing utilizes a package's HttpHandler to test all requests and related respon
 
 [errorhandler]: <https://pkg.go.dev/github.com/advanced-go/core/runtime#ErrorHandler>
 [loghandler]: <https://pkg.go.dev/github.com/advanced-go/core/runtime#Log>
-[messagingpcore]: <https://pkg.go.dev/github.com/advanced-go/messaging#Message>
+[messagingcore]: <https://pkg.go.dev/github.com/advanced-go/messaging#Message>
 [domainservice]: <https://pkg.go.dev/github.com/advanced-go/example-domain/service>
 [logger]: <https://pkg.go.dev/github.com/advanced-go/core/access#Log>
 [intermediary]: <https://pkg.go.dev/github.com/advanced-go/core/host#ServeHTTPFunc>
