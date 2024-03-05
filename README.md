@@ -5,6 +5,9 @@ Advanced Go is an exercise in creating a new software engineering paradigm that 
 ## REST Uniform Interface, Resource Identifier, & Self-Descriptive Messages
 A key concept of REST is the uniform inerface. A [package's][domainservice] HttpHandler implements that uniform interaface, uses the http.Request type and allows easy integration with other packages. A package also includes a PkgPath that is used as an identifier
 
+The [messaging][messagingcode] package provides a uniform interface, self-descriptive message, and resource identification for communication between resources
+using goroutines and gochannels. Functionality supported by messaging include startup, shutdown, and package health check.
+
 [Error handling][errorhandler] also benefits from a uniform interface, allowing [generice type's][loghandler] for implementation. 
 
 [Access logging][logger] also has a uniform Log function.  
@@ -18,12 +21,11 @@ REST defines a layered architecture style where RESTful components can be easily
 Testing utilizes a package's HttpHandler to test all requests and related responses. The requests and responses are HTTP text files, deserialized from disk into the appropriate [http.Request][httprequest] and [http.Response][httpresponse] types. This allows an automated, easy to extend solution for testing. Since the package HttpHandler is the public interface for the package, no further testing of the package needs to be done in a host.  
 
 ## Application Development
-[Messaging][messagingpkg] was developmented to provied ease of interactions between a network of heterogenous agents, working together satisify the goals of an AI Agent.
 
 
 [errorhandler]: <https://pkg.go.dev/github.com/advanced-go/core/runtime#ErrorHandler>
 [loghandler]: <https://pkg.go.dev/github.com/advanced-go/core/runtime#Log>
-[messagingpkg]: <https://pkg.go.dev/github.com/advanced-go/messaging>
+[messagingpcore]: <https://pkg.go.dev/github.com/advanced-go/messaging#Message>
 [domainservice]: <https://pkg.go.dev/github.com/advanced-go/example-domain/service>
 [logger]: <https://pkg.go.dev/github.com/advanced-go/core/access#Log>
 [intermediary]: <https://pkg.go.dev/github.com/advanced-go/core/host#ServeHTTPFunc>
