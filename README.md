@@ -3,7 +3,7 @@
 Advanced Go is an exercise in creating a new software engineering paradigm that would streamline application development, improve testing efficacy, and alleviate some of the things that are hard to change with a microservices architecture. This solution to creating a new paradigm was extending REST from the service/HTTP layer to the application layer. What follows are the implementation details of a new software engineering paradigm.
 
 ## REST Uniform Interface & Resource Identifier
-A key concept of REST is the uniform inerface. A [package's][domainservice] HttpHandler implements that uniform interaface, and allows easy integration with other packages.A package also includes a PkgPath that can be used as an identifier
+A key concept of REST is the uniform inerface. A [package's][domainservice] HttpHandler implements that uniform interaface, and allows easy integration with other packages. A package also includes a PkgPath that can be used as an identifier
 
 [Error handling][errorhandler] also benefits from a uniform interface, allowing [generice type's][loghandler] for implementation. 
 
@@ -11,21 +11,22 @@ A key concept of REST is the uniform inerface. A [package's][domainservice] Http
 
 
 ## REST Intermediaries
-REST defines a layered architecture style where RESTful components can be easily connected via HTTP. Service authenticaion/authorization are implemented by adding an [intermediary][intermediary].
+REST defines a layered architecture style where RESTful components can be easily connected via HTTP. Service authenticaion/authorization functionality is implemented by adding an [intermediary][intermediary].
 
+## Testing
+Testing utilizes a package's HttpHandler to test all requests and related responses. The requests and responses are deserialized from disk into  the appropriate [http.Request][httprequest] and http.Response types. This allows an automated, easy to extend solution for testing. Since the package HttpHandler is the public interface for the package, no further testing of the package needs to be done in a host.  
 
+## Application Development
 [Messaging][messagingpkg] was developmented to provied ease of interactions between a network of heterogenous agents, working together satisify the goals of an AI Agent.
 
 
-## Testing
-
-## Application Development
 [errorhandler]: <https://pkg.go.dev/github.com/advanced-go/core/runtime#ErrorHandler>
 [loghandler]: <https://pkg.go.dev/github.com/advanced-go/core/runtime#Log>
 [messagingpkg]: <https://pkg.go.dev/github.com/advanced-go/messaging>
 [domainservice]: <https://pkg.go.dev/github.com/advanced-go/example-domain/service>
 [logger]: <https://pkg.go.dev/github.com/advanced-go/core/access#Log>
 [intermediary]: <https://pkg.go.dev/github.com/advanced-go/core/host#ServeHTTPFunc>
+[httprequest]: <https://pkg.go.dev/net/http#Request>
 
 <!--
 ### Hi there 👋
