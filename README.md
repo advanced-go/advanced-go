@@ -1,29 +1,31 @@
 # Advanced Go
 
-Advanced Go is an exercise in development of architectures to facilitate the development of AI Agents. Inspiration for the AI Agent architecture is defined in the AI text book by [Stuart Russell & Peter Norvig][aima]. The textbook defines an AI Agent as follows:
-~~~
-An agent is anything that can be viewed as perceiving its environment through sensors and acting upon that environment
-through effectors. 
-~~~
+Advanced Go is an exercise in creating a new software engineering paradigm that would streamline application development, improve testing efficacy, and alleviate some of the things that are hard to change with a microservices architecture. This solution to creating a new paradigm was extending REST from the service/HTTP layer to the application layer. What follows are the implementation details of a new software engineering paradigm.
 
-The AI Agent developed implements an observation -> analyze -> act cycle focused on autonomous 
+## REST Uniform Interface & Resource Identifier
+A key concept of REST is the uniform inerface. A [package's][domainservice] HttpHandler implements that uniform interaface, and allows easy integration with other packages.A package also includes a PkgPath that can be used as an identifier
 
-The agent utilizes the following modules:
+[Error handling][errorhandler] also benefits from a uniform interface, allowing [generice type's][loghandler] for implementation. 
 
-1. example-agent - resiliency agent implementation
-2. example-domain - resources used by the agent: timeseries access log, SLO, and an agent activity audit trail
-3. example-host - a service host for the AI Agent
-4. example-test - a test application used to send timeseries and SLO data to the service host.
+[Access logging][logger] also has a uniform Log function.  
 
-Additional [core][corepkg] modules was created to provide high levels of reliability and visibailty for AI Agent architectures.
+
+## REST Intermediaries
+REST defines a layered architecture style where RESTful components can be easily connected via HTTP. Service authenticaion/authorization are implemented by adding an [intermediary][intermediary].
+
 
 [Messaging][messagingpkg] was developmented to provied ease of interactions between a network of heterogenous agents, working together satisify the goals of an AI Agent.
 
 
+## Testing
 
-[aima]: <https://aima.cs.berkeley.edu/>
-[corepkg]: <https://pkg.go.dev/github.com/advanced-go/core>
+## Application Development
+[errorhandler]: <https://pkg.go.dev/github.com/advanced-go/core/runtime#ErrorHandler>
+[loghandler]: <https://pkg.go.dev/github.com/advanced-go/core/runtime#Log>
 [messagingpkg]: <https://pkg.go.dev/github.com/advanced-go/messaging>
+[domainservice]: <https://pkg.go.dev/github.com/advanced-go/example-domain/service>
+[logger]: <https://pkg.go.dev/github.com/advanced-go/core/access#Log>
+[intermediary]: <https://pkg.go.dev/github.com/advanced-go/core/host#ServeHTTPFunc>
 
 <!--
 ### Hi there 👋
