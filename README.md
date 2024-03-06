@@ -22,8 +22,7 @@ Testing utilizes a package's HttpHandler to test all requests and related respon
 
 ## Application Development
 
-
-[robpike] <https://thenewstack.io/golang-co-creator-rob-pike-what-go-got-right-and-wrong>
+[robpike]: <https://thenewstack.io/golang-co-creator-rob-pike-what-go-got-right-and-wrong>
 [errorhandler]: <https://pkg.go.dev/github.com/advanced-go/core/runtime#ErrorHandler>
 [loghandler]: <https://pkg.go.dev/github.com/advanced-go/core/runtime#Log>
 [msgcore]: <https://pkg.go.dev/github.com/advanced-go/core/messaging#Message>
