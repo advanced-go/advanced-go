@@ -14,7 +14,8 @@ The messaging package provides a [uniform interface][msgsend], [self-descriptive
 ## REST Intermediaries
 REST defines a layered architecture style where RESTful components can be easily connected via HTTP. Service authenticaion/authorization functionality is implemented by adding an [intermediary][intermediary].
 
-## URL as a Resource
+## REST Applied to URL's
+Treating a URL as a resource, where manipulation of the URL is through a representation, allows for that representaion to change based on runtime environment/time. A [resolver type][resolver], provides the representations of a URL, and is the mechanism used to generate file scheme URL's(file://) for testing and HTTPS scheme URL's(https://) for runtime environments.
 
 ## Testing
 Testing utilizes a package's HttpHandler to test all requests and related responses. The requests and responses are HTTP text files, deserialized from disk into the appropriate [http.Request][httprequest] and [http.Response][httpresponse] types. This allows an automated, easy to extend solution for testing. Since the package HttpHandler is the public interface for the package, no further testing of the package needs to be done in a host.  
@@ -26,12 +27,12 @@ Testing utilizes a package's HttpHandler to test all requests and related respon
 [loghandler]: <https://pkg.go.dev/github.com/advanced-go/core/runtime#Log>
 [msgcore]: <https://pkg.go.dev/github.com/advanced-go/core/messaging#Message>
 [msgsend]: <https://pkg.go.dev/github.com/advanced-go/core/messaging#SendFunc>
-
 [domainservice]: <https://pkg.go.dev/github.com/advanced-go/example-domain/service>
 [logger]: <https://pkg.go.dev/github.com/advanced-go/core/access#Log>
 [intermediary]: <https://pkg.go.dev/github.com/advanced-go/core/host#ServeHTTPFunc>
 [httprequest]: <https://pkg.go.dev/net/http#Request>
 [httpresponse]: <https://pkg.go.dev/net/http#Response>
+[resolver]: <https://pkg.go.dev/github.com/advanced-go/core/uri#Resolver>
 
 <!--
 ### Hi there 👋
