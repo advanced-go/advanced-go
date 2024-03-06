@@ -15,7 +15,7 @@ The messaging package provides a [uniform interface][msgsend], [self-descriptive
 REST defines a layered architecture style where RESTful components can be easily connected via HTTP. Service authenticaion/authorization functionality is implemented by adding an [intermediary][intermediary].
 
 ## REST Applied to URL's
-Treating a URL as a resource, where manipulation of the URL is through a representation, allows for that representaion to change based on runtime environment/time. A [resolver type][resolver], provides the representations of a URL, and is the mechanism used to generate file scheme URL's(file://) for testing and HTTPS scheme URL's(https://) for runtime environments.
+Treating a URL as a resource, where manipulation of the URL is through a representation, allows for that representaion to change based on runtime environment/time. A [resolver type][resolver], provides the representations of a URL, and is the mechanism used to generate file scheme URL's (file://) for testing and HTTPS scheme URL's (https://) for runtime environments.
 
 ## Testing
 Testing utilizes a package's HttpHandler to test all requests and related responses. The requests and responses are HTTP text files, deserialized from disk into the appropriate [http.Request][httprequest] and [http.Response][httpresponse] types. This allows an automated, easy to extend solution for testing. Since the package HttpHandler is the public interface for the package, no further testing of the package needs to be done in a host.  
