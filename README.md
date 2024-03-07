@@ -14,7 +14,7 @@ The messaging package provides a [uniform interface][msgsend], [self-descriptive
 ## REST Intermediaries
 REST defines a layered architecture style where RESTful components can be easily connected via HTTP. Service authentication/authorization functionality is implemented by adding an [intermediary][intermediary].
 
-## REST Applied to URL's
+## REST Applied to URLs
 Treating a URL as a resource, where manipulation of the URL is through a representation, allows for that representation to change based on runtime environment/time. A [resolver type][resolver], provides the representations of a URL, and is the mechanism used to generate file scheme URL (file://) for testing and HTTPS scheme URL (https://) for runtime environments.
 
 ## Testing
