@@ -3,7 +3,7 @@
 Advanced Go is an exercise in creating [a better way to write software][robpike], by extending REST from the service/HTTP layer to the application layer. The following provides specific implementations that frame a new application software development paradigm based on REST.
 
 ## REST Uniform Interface, Resource Identifier, & Self-Descriptive Messages
-A key concept of REST is the uniform interface. A [package's][domainservice] HttpHandler implements that uniform interaface, uses the http.Request type and allows easy integration with other packages. A package also includes a PkgPath that is used as an identifier for routing and error tracing.
+A key concept of REST is the uniform interface. A [package's][domainservice] HttpHandler implements that uniform interface, uses the http.Request type and allows easy integration with other packages. A package also includes a PkgPath that is used as an identifier for routing and error tracing.
 
 The messaging package provides a [uniform interface][msgsend], [self-descriptive message][msgcore], and [resource identification][msgcore] for communication between resources using goroutines and Go channels. Functionality supported by messaging include startup, shutdown, and package health checks.
 
@@ -12,10 +12,10 @@ The messaging package provides a [uniform interface][msgsend], [self-descriptive
 [Access logging][logger] also has a uniform Log function.  
 
 ## REST Intermediaries
-REST defines a layered architecture style where RESTful components can be easily connected via HTTP. Service authenticaion/authorization functionality is implemented by adding an [intermediary][intermediary].
+REST defines a layered architecture style where RESTful components can be easily connected via HTTP. Service authentication/authorization functionality is implemented by adding an [intermediary][intermediary].
 
 ## REST Applied to URL's
-Treating a URL as a resource, where manipulation of the URL is through a representation, allows for that representaion to change based on runtime environment/time. A [resolver type][resolver], provides the representations of a URL, and is the mechanism used to generate file scheme URL's (file://) for testing and HTTPS scheme URL's (https://) for runtime environments.
+Treating a URL as a resource, where manipulation of the URL is through a representation, allows for that representation to change based on runtime environment/time. A [resolver type][resolver], provides the representations of a URL, and is the mechanism used to generate file scheme URL (file://) for testing and HTTPS scheme URL (https://) for runtime environments.
 
 ## Testing
 Testing utilizes a package's HttpHandler to test all requests and related responses. The requests and responses are HTTP text files, deserialized from disk into the appropriate [http.Request][httprequest] and [http.Response][httpresponse] types. This allows an automated, easy to extend solution for testing. Since the package HttpHandler is the public interface for the package, no further testing of the package needs to be done in a host.  
