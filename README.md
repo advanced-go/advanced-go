@@ -4,9 +4,9 @@ Advanced Go is an exercise in creating [a better way to write software][robpike]
 
 Go is a project to make building production software easier and more productive
 
-1. Reduce complexity via uniform interface
-2. Reduce development toil
-3. Increase solution expressiveness -  
+1. Reduce complexity
+2. Reduce toil
+3. Increase solution expressiveness   
 
  
 ## REST Applied to Packages
