@@ -14,19 +14,22 @@ Go is a project to make building production software easier and more productive
 2. REST Constraints - resource identifier - PkgPath, manipulation through representation, and self descriptive message. http.Request and Http.Response
 Expressiveness - ability to compose resources/packages from already tested packages. Dynamic topography, mobile code.
 Funcionality like authorization, access logging, via intermediaries
+Seperation of concerns, host from application, other Cloud hosting options - less complexity, more expressiveness.
 
 ## REST Applied to Error Handling and Logging
 Expressiveness - 
 1. Uniform interface - ErrorHandler and logging. loging interface allows expresiveness
 2. Constraints - resource identifier - PkgPath, manipulation through representation, and self descriptive message. http.Request and Http.Response
-[Error handling][errorhandler] also benefits from a uniform interface, allowing [generice type's][loghandler] for implementation. 
+[Error handling][errorhandler] [generice type's][loghandler] for implementation.
+Expressiveness through gnerics 
 
 [Access logging][logger] also has a uniform Log function.  Expressive - Add traffic differentiation, ingress, egress, and internal
 
 ## REST Applied to Testing
 Uniform interface - Resolver build with configurable templates. Expressiveness - Configurable templates to handle different URL resolution for development envirnment
+URL as a resource
 
-## REST Applied to URLs
+
 Treating a URL as a resource, where manipulation of the URL is through a representation, allows for that representation to change based on runtime environment/time. A [resolver type][resolver], provides the representations of a URL, and is the mechanism used to generate file scheme URL (file://) for testing and HTTPS scheme URL (https://) for runtime environments.
 
 
