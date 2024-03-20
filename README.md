@@ -1,21 +1,39 @@
 # Advanced Go
 
-Advanced Go is an exercise in creating [a better way to write software][robpike], by extending REST from the service/HTTP layer to the application layer. The following implementations frame a new application software development paradigm based on REST.
+Advanced Go is an exercise in creating [a better way to write software][robpike], by extending REST from the service/HTTP layer to the application layer. The following implementations frame a new application software development paradigm based on REST. 
+Go is a project to make building production software easier and more productive![image](https://github.com/advanced-go/advanced-go/assets/150920695/d354c4dd-5861-45cd-a2bb-9690625691f7)
+
+1. Increase solution expressiveness - ability to compose resources/packages from already tested packages. Dynamic topography, mobile code. Functionality via intermedariars?
+2. Reduce toil of service development.
+
+## REST Applied to Packages
+1. Uniform interface - httphandler
+2. Constraints - resource identifier - PkgPath, manipulation through representation, and self descriptive message. http.Request and Http.Response
+
+
+## REST Applied to Error Handling and Logging
+1. Uniform interface - httphandler
+2. Constraints - resource identifier - PkgPath, manipulation through representation, and self descriptive message. http.Request and Http.Response
+[Error handling][errorhandler] also benefits from a uniform interface, allowing [generice type's][loghandler] for implementation. 
+
+[Access logging][logger] also has a uniform Log function.  
+
+## REST Applied to Testing
+
+## REST Applied to URLs
+Treating a URL as a resource, where manipulation of the URL is through a representation, allows for that representation to change based on runtime environment/time. A [resolver type][resolver], provides the representations of a URL, and is the mechanism used to generate file scheme URL (file://) for testing and HTTPS scheme URL (https://) for runtime environments.
+
 
 ## REST Uniform Interface, Resource Identifier, & Self-Descriptive Messages
 A key concept of REST is the uniform interface. A [package's][domainservice] HttpHandler implements that uniform interface, uses the http.Request type and allows easy integration with other packages. A package also includes a PkgPath that is used as an identifier for routing and error tracing.
 
 The messaging package provides a [uniform interface][msgsend], [self-descriptive message][msgcore], and [resource identification][msgcore] for communication between resources using goroutines and Go channels. Functionality supported by messaging include startup, shutdown, and package health checks.
 
-[Error handling][errorhandler] also benefits from a uniform interface, allowing [generice type's][loghandler] for implementation. 
 
-[Access logging][logger] also has a uniform Log function.  
 
 ## REST Intermediaries
 REST defines a layered architecture style where RESTful components can be easily connected via HTTP. Service authentication/authorization functionality is implemented by adding an [intermediary][intermediary].
 
-## REST Applied to URLs
-Treating a URL as a resource, where manipulation of the URL is through a representation, allows for that representation to change based on runtime environment/time. A [resolver type][resolver], provides the representations of a URL, and is the mechanism used to generate file scheme URL (file://) for testing and HTTPS scheme URL (https://) for runtime environments.
 
 ## Testing
 Testing utilizes a package's HttpHandler to test all requests and related responses. The requests and responses are HTTP text files, deserialized from disk into the appropriate [http.Request][httprequest] and [http.Response][httpresponse] types. This allows an automated, easy to extend solution for testing. Since the package HttpHandler is the public interface for the package, no further testing of the package needs to be done in a host.  
