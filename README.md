@@ -1,18 +1,20 @@
 # Advanced Go
 
 Advanced Go is an exercise in creating [a better way to write software][robpike], by extending REST from the service/HTTP layer to the application layer. The following implementations frame a new application software development paradigm based on REST. 
-Go is a project to make building production software easier and more productive![image](https://github.com/advanced-go/advanced-go/assets/150920695/d354c4dd-5861-45cd-a2bb-9690625691f7)
 
-1. Increase solution expressiveness - ability to compose resources/packages from already tested packages. Dynamic topography, mobile code. Functionality via intermedariars?
-2. Reduce toil of service development.
+Go is a project to make building production software easier and more productive
 
+1. Reduce complexity via uniform interface
+2. Increase solution expressiveness - ability to compose resources/packages from already tested packages. Dynamic topography, mobile code. Functionality via intermedariars?
+3. Reduce toil of service development.
+ 
 ## REST Applied to Packages
 1. Uniform interface - httphandler
 2. Constraints - resource identifier - PkgPath, manipulation through representation, and self descriptive message. http.Request and Http.Response
 
 
 ## REST Applied to Error Handling and Logging
-1. Uniform interface - httphandler
+1. Uniform interface - ErrorHandler
 2. Constraints - resource identifier - PkgPath, manipulation through representation, and self descriptive message. http.Request and Http.Response
 [Error handling][errorhandler] also benefits from a uniform interface, allowing [generice type's][loghandler] for implementation. 
 
