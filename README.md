@@ -5,22 +5,25 @@ Advanced Go is an exercise in creating [a better way to write software][robpike]
 Go is a project to make building production software easier and more productive
 
 1. Reduce complexity via uniform interface
-2. Increase solution expressiveness - ability to compose resources/packages from already tested packages. Dynamic topography, mobile code. Functionality via intermedariars?
+2. Increase solution expressiveness -  
 3. Reduce toil of service development.
  
 ## REST Applied to Packages
 1. Uniform interface - httphandler
-2. Constraints - resource identifier - PkgPath, manipulation through representation, and self descriptive message. http.Request and Http.Response
-
+2. REST Constraints - resource identifier - PkgPath, manipulation through representation, and self descriptive message. http.Request and Http.Response
+Expressiveness - ability to compose resources/packages from already tested packages. Dynamic topography, mobile code.
+Funcionality via intermediaries
 
 ## REST Applied to Error Handling and Logging
-1. Uniform interface - ErrorHandler
+Expressiveness - 
+1. Uniform interface - ErrorHandler and logging. loging interface allows expresiveness
 2. Constraints - resource identifier - PkgPath, manipulation through representation, and self descriptive message. http.Request and Http.Response
 [Error handling][errorhandler] also benefits from a uniform interface, allowing [generice type's][loghandler] for implementation. 
 
-[Access logging][logger] also has a uniform Log function.  
+[Access logging][logger] also has a uniform Log function.  Expressive - Add traffic differentiation, ingress, egress, and internal
 
 ## REST Applied to Testing
+Uniform interface - Resolver build with configurable templates. Expressiveness - Configurable templates to handle different URL resolution for development envirnment
 
 ## REST Applied to URLs
 Treating a URL as a resource, where manipulation of the URL is through a representation, allows for that representation to change based on runtime environment/time. A [resolver type][resolver], provides the representations of a URL, and is the mechanism used to generate file scheme URL (file://) for testing and HTTPS scheme URL (https://) for runtime environments.
