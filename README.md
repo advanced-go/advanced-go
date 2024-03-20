@@ -5,14 +5,15 @@ Advanced Go is an exercise in creating [a better way to write software][robpike]
 Go is a project to make building production software easier and more productive
 
 1. Reduce complexity via uniform interface
-2. Increase solution expressiveness -  
-3. Reduce toil of service development.
+2. Reduce development toil
+3. Increase solution expressiveness -  
+
  
 ## REST Applied to Packages
 1. Uniform interface - httphandler
 2. REST Constraints - resource identifier - PkgPath, manipulation through representation, and self descriptive message. http.Request and Http.Response
 Expressiveness - ability to compose resources/packages from already tested packages. Dynamic topography, mobile code.
-Funcionality via intermediaries
+Funcionality like authorization, access logging, via intermediaries
 
 ## REST Applied to Error Handling and Logging
 Expressiveness - 
