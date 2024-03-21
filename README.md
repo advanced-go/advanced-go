@@ -8,14 +8,20 @@ Advanced Go is an exercise in creating [a better way to write software][robpike]
 
  
 ## REST Applied to Packages
-The uniform interface for a package, detailed below, simplifies the overall system architecture and increases the visibility of interactions. Expressiveness is enhanced in the following areas:
-1. Composition of packages - the uniform interface provides this, and also allows packages to be used as intermediaries for functinality such as authorization or access logging.
-2. Microservice development - Packages are developed independently of hosts, providing seperation of concerns, allowing a package to exist in multiple hosts, independent of the cloud hosting offering. Toil is reduced as packages are fully tested in development, not needing additional test in a service.
-3. REST Constraints - resource identifier - PkgPath, manipulation through representation, and self descriptive message. http.Request and Http.Response
-Expressiveness - ability to compose resources/packages from already tested packages. Dynamic topography, mobile code.
+The [uniform interface for a package][exampledomain] simplifies the overall system architecture and increases the visibility of interactions. Expressiveness is enhanced in the following areas:
+1. Composition of packages - Supported via the uniform interface, and also allows packages to be used as intermediaries for functinality such as authorization and access logging.
+2. Microservice development - Packages are developed independently of hosts, allowing a package to exist in multiple hosts independent of different cloud hosting options. Toil is reduced as packages are fully tested in development, not requiring additional testing in a service.
+3. [Mobile Code Architectural Style][rest] - Packages are independent of services, providing a dynamic service topography where reliability and latency can be managed by combining packages in a single service.
+
+A package implementation also follows the [REST constraints][rest] of:
+1. Resource identifier - PkgPath
+2. Manipulation through representation - http.Request and http.Response
+3. Self descriptive message - http.Request and http.Response
+
+<!--Expressiveness - ability to compose resources/packages from already tested packages. Dynamic topography, mobile code.
 Funcionality like authorization, access logging, via intermediaries
 Seperation of concerns, host from application, other Cloud hosting options - less complexity, more expressiveness.
-
+-->
 
 ## REST Applied to Error Handling 
 Expressiveness - 
@@ -52,6 +58,8 @@ Testing utilizes a package's HttpHandler to test all requests and related respon
 Development is streamlined as applications can be composed of existing resources/packages or resources in existing services. 
 
 [robpike]: <https://thenewstack.io/golang-co-creator-rob-pike-what-go-got-right-and-wrong>
+[rest]: <https://ics.uci.edu/~fielding/pubs/dissertation/fielding_dissertation.pdf>
+[exampledomain]: <https://pkg.go.dev/github.com/advanced-go/example-domain/service>
 [errorhandler]: <https://pkg.go.dev/github.com/advanced-go/core/runtime#ErrorHandler>
 [loghandler]: <https://pkg.go.dev/github.com/advanced-go/core/runtime#Log>
 [msgcore]: <https://pkg.go.dev/github.com/advanced-go/core/messaging#Message>
