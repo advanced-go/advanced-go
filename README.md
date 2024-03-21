@@ -25,7 +25,7 @@ Expressiveness through gnerics
 
 [Access logging][logger] also has a uniform Log function.  Expressive - Add traffic differentiation, ingress, egress, and internal
 
-## REST Applied to Testing
+## REST Applied to URLs and Testing
 Uniform interface - Resolver build with configurable templates. Expressiveness - Configurable templates to handle different URL resolution for development envirnment
 URL as a resource
 
