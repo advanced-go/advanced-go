@@ -24,15 +24,14 @@ Seperation of concerns, host from application, other Cloud hosting options - les
 -->
 
 ## REST Applied to Error Handling 
-The [error handler uniform interface][errorhandler] simplifies development and allows an application to determine where an error is handled via a [generic][activity].
-Expressiveness is achieved via different error handler implementations for different environments and/or use cases such as error logging, echeoing errors to stdout, or bypassing error handling.
+The [error handler uniform interface][errorhandler] simplifies development and reduces toil by allowing an application to determine where an error is handled via a [generic error handler type][activity].
+Expressiveness is achieved via different error handler implementations for different environments and/or use cases such as error logging, echoing errors to stdout, or bypassing error handling.
 
 
 <!--1. Uniform interface - ErrorHandler and logging. loging interface allows expresiveness
 2. Constraints - resource identifier - PkgPath, manipulation through representation, and self descriptive message. http.Request and Http.Response
 [Error handling][errorhandler] [generice type's][loghandler] for implementation.
 Expressiveness through gnerics 
-
 [Access logging][logger] also has a uniform Log function.  Expressive - Add traffic differentiation, ingress, egress, and internal
 -->
 
@@ -43,23 +42,22 @@ URL as a resource
 
 Treating a URL as a resource, where manipulation of the URL is through a representation, allows for that representation to change based on runtime environment/time. A [resolver type][resolver], provides the representations of a URL, and is the mechanism used to generate file scheme URL (file://) for testing and HTTPS scheme URL (https://) for runtime environments.
 
-
+<!--
 ## REST Uniform Interface, Resource Identifier, & Self-Descriptive Messages
 A key concept of REST is the uniform interface. A [package's][domainservice] HttpHandler implements that uniform interface, uses the http.Request type and allows easy integration with other packages. A package also includes a PkgPath that is used as an identifier for routing and error tracing.
 
 The messaging package provides a [uniform interface][msgsend], [self-descriptive message][msgcore], and [resource identification][msgcore] for communication between resources using goroutines and Go channels. Functionality supported by messaging include startup, shutdown, and package health checks.
 
-
-
 ## REST Intermediaries
 REST defines a layered architecture style where RESTful components can be easily connected via HTTP. Service authentication/authorization functionality is implemented by adding an [intermediary][intermediary].
-
 
 ## Testing
 Testing utilizes a package's HttpHandler to test all requests and related responses. The requests and responses are HTTP text files, deserialized from disk into the appropriate [http.Request][httprequest] and [http.Response][httpresponse] types. This allows an automated, easy to extend solution for testing. Since the package HttpHandler is the public interface for the package, no further testing of the package needs to be done in a host.  
 
 ## Application Development
 Development is streamlined as applications can be composed of existing resources/packages or resources in existing services. 
+
+-->
 
 [robpike]: <https://thenewstack.io/golang-co-creator-rob-pike-what-go-got-right-and-wrong>
 [rest]: <https://ics.uci.edu/~fielding/pubs/dissertation/fielding_dissertation.pdf>
