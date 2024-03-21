@@ -1,8 +1,6 @@
 # Advanced Go
 
-Advanced Go is an exercise in creating [a better way to write software][robpike], by extending REST from the service/HTTP layer to the application layer. The following implementations frame a new application software development paradigm based on REST. 
-
-Go is a project to make building production software easier and more productive
+Advanced Go is an exercise in creating [a better way to write software][robpike], by extending REST from the service/HTTP layer to the application layer. The following goals are examined when applying REST to packages, error handling, URLs, and testing. <!-- Go is a project to make building production software easier and more productive. -->
 
 1. Reduce complexity
 2. Reduce toil
@@ -16,7 +14,7 @@ Expressiveness - ability to compose resources/packages from already tested packa
 Funcionality like authorization, access logging, via intermediaries
 Seperation of concerns, host from application, other Cloud hosting options - less complexity, more expressiveness.
 
-## REST Applied to Error Handling and Logging
+## REST Applied to Error Handling 
 Expressiveness - 
 1. Uniform interface - ErrorHandler and logging. loging interface allows expresiveness
 2. Constraints - resource identifier - PkgPath, manipulation through representation, and self descriptive message. http.Request and Http.Response
