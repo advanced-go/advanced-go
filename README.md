@@ -9,12 +9,12 @@ Advanced Go is an exercise in creating [a better way to write software][robpike]
  
 ## REST Applied to Packages
 The [uniform interface for a package][exampledomain] simplifies the overall system architecture and increases the visibility of interactions. Expressiveness is enhanced in the following areas:
-1. Composition of packages - Supported via the uniform interface, and also allows packages to be used as intermediaries for functinality such as authorization and access logging.
-2. Microservice development - Packages are developed independently of hosts, allowing a package to exist in multiple hosts independent of different cloud hosting options. Toil is reduced as packages are fully tested in development, not requiring additional testing in a service.
+1. Composition of packages - Supported via the uniform interface, and allows packages to be used as intermediaries for authorization and access logging functinality.
+2. Microservice development - Packages are developed independently of hosts, allowing a package to exist in multiple hosts independent of cloud hosting architetures. Toil is reduced as packages are fully tested in development, not requiring additional service testing.
 3. [Mobile Code Architectural Style][rest] - Packages are independent of services, providing a dynamic service topography where reliability and latency can be managed by combining packages in a single service.
 
-A package implementation also follows the [REST constraints][rest] of:
-1. Resource identifier - PkgPath
+A package also maintains the following [REST constraints][rest]:
+1. Resource identifier - [PkgPath][exampledomain]
 2. Manipulation through representation - http.Request and http.Response
 3. Self descriptive message - http.Request and http.Response
 
@@ -24,13 +24,17 @@ Seperation of concerns, host from application, other Cloud hosting options - les
 -->
 
 ## REST Applied to Error Handling 
-Expressiveness - 
-1. Uniform interface - ErrorHandler and logging. loging interface allows expresiveness
+The [error handler uniform interface][errorhandler] simplifies development and allows an application to determine where an error is handled via a [generic][activity].
+Expressiveness is achieved via different error handler implementations for different environments and/or use cases such as error logging, echeoing errors to stdout, or bypassing error handling.
+
+
+<!--1. Uniform interface - ErrorHandler and logging. loging interface allows expresiveness
 2. Constraints - resource identifier - PkgPath, manipulation through representation, and self descriptive message. http.Request and Http.Response
 [Error handling][errorhandler] [generice type's][loghandler] for implementation.
 Expressiveness through gnerics 
 
 [Access logging][logger] also has a uniform Log function.  Expressive - Add traffic differentiation, ingress, egress, and internal
+-->
 
 ## REST Applied to URLs and Testing
 Uniform interface - Resolver build with configurable templates. Expressiveness - Configurable templates to handle different URL resolution for development envirnment
@@ -60,6 +64,7 @@ Development is streamlined as applications can be composed of existing resources
 [robpike]: <https://thenewstack.io/golang-co-creator-rob-pike-what-go-got-right-and-wrong>
 [rest]: <https://ics.uci.edu/~fielding/pubs/dissertation/fielding_dissertation.pdf>
 [exampledomain]: <https://pkg.go.dev/github.com/advanced-go/example-domain/service>
+[activity]: <https://pkg.go.dev/github.com/advanced-go/example-domain/activity>
 [errorhandler]: <https://pkg.go.dev/github.com/advanced-go/core/runtime#ErrorHandler>
 [loghandler]: <https://pkg.go.dev/github.com/advanced-go/core/runtime#Log>
 [msgcore]: <https://pkg.go.dev/github.com/advanced-go/core/messaging#Message>
