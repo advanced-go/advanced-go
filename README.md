@@ -9,7 +9,7 @@ Advanced Go is an exercise in creating [a better way to write software][robpike]
  
 ## REST Applied to Packages
 The [uniform interface for a package][exampledomain] simplifies the overall system architecture and increases the visibility of interactions. Expressiveness is enhanced in the following areas:
-1. Composition of packages - Supported via the uniform interface, and allows packages to be used as intermediaries for authorization and access logging functinality.
+1. Composition of packages - Supported via the uniform interface, and allows packages to be used as intermediaries for authorization, access logging, and resiliency controllers for connectivity timeouts and least cost routing(LCR).
 2. Microservice development - Packages are developed independently of hosts, allowing a package to exist in multiple hosts independent of cloud hosting architetures. Toil is reduced as packages are fully tested in development, not requiring additional service testing.
 3. [Mobile Code Architectural Style][rest] - Packages are independent of services, providing a dynamic service topography where reliability and latency can be managed by combining packages in a single service.
 
