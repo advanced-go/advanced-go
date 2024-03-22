@@ -26,9 +26,9 @@ Expressiveness is achieved via different error handler implementations for diffe
 
 
 ## REST Applied to URLs and Testing
-Treating a URL as a resource, where manipulation of the URL is through a representation, allows for that representation to change over time as an application migrates through different development environments. A [resolver type][resolver], provides different representations of a URL and is the mechanism used to resolve URLs for testing, using the file scheme, (file://) and other environments using the HTTP or HTTPS scheme (http://,https://). Runtime configurable templates, used during URL resolution, provide the necessary expresiveness. The use of a uniform [type][resolver], provides simplicity and reduces toil by performing URL resolution with one type, instead of formatting embedded URL strings.
+Treating a URL as a resource, where manipulation of the URL is through a representation, allows for that representation to change over time as an application migrates through different development environments. A [resolver type][resolver], provides different representations of a URL and is the mechanism used to resolve URLs for testing, using the file scheme, (file://) and other environments using the HTTP or HTTPS scheme (http://,https://). Runtime configurable templates, used during URL resolution, provide the necessary expresiveness. The use of a uniform type provides simplicity and reduces toil by performing URL resolution with one type, instead of formatting embedded URL strings.
 
-
+Testing utilizes a package's [uniform interface][exampledomain] to test all requests and related responses. The requests and responses are HTTP text files, deserialized from disk into the appropriate [http.Request][httprequest] and [http.Response][httpresponse] types. This allows an automated, reliable, easy to extend solution for testing. Since the HttpHandler is the public interface for the package, no further testing of the package needs to be done in a service.  
 
 <!--
 1. Uniform interface - ErrorHandler and logging. loging interface allows expresiveness
@@ -40,7 +40,6 @@ Expressiveness through gnerics
 Expressiveness - ability to compose resources/packages from already tested packages. Dynamic topography, mobile code.
 Funcionality like authorization, access logging, via intermediaries
 Seperation of concerns, host from application, other Cloud hosting options - less complexity, more expressiveness.
-
 
 ## REST Uniform Interface, Resource Identifier, & Self-Descriptive Messages
 A key concept of REST is the uniform interface. A [package's][domainservice] HttpHandler implements that uniform interface, uses the http.Request type and allows easy integration with other packages. A package also includes a PkgPath that is used as an identifier for routing and error tracing.
