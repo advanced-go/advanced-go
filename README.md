@@ -4,12 +4,12 @@ Advanced Go is an exercise in creating [a better way to write software][robpike]
 
 1. Reduce complexity and toil
 2. Increase solution expressiveness
-3. Maximize reliability and resiliency
+3. Maximize reliability and autonomous resiliency
 
  
 ## REST Applied to Packages
 The [uniform interface for a package][exampledomain] simplifies the overall system architecture and increases the visibility of interactions. Expressiveness is enhanced in the following areas:
-1. Composition of packages - Supported via the uniform interface, and allows packages to be used as intermediaries for authorization, access logging, and resiliency controllers for connectivity timeouts and least cost routing(LCR).
+1. Composition of packages - Supported via the uniform interface, and allows packages to be used as intermediaries for authorization, access logging, and request controllers for timeouts and routing.
 2. Microservice development - Packages are developed independently of hosts, allowing a package to exist in multiple hosts independent of cloud hosting architetures. Toil is reduced as packages are fully tested in development, not requiring additional service testing.
 3. [Mobile Code Architectural Style][rest] - Packages are independent of services, providing a dynamic service topography where reliability and latency can be managed by combining packages in a single service.
 
@@ -18,23 +18,12 @@ A package also maintains the following [REST constraints][rest]:
 2. Manipulation through representation - http.Request and http.Response
 3. Self descriptive message - http.Request and http.Response
 
-<!--Expressiveness - ability to compose resources/packages from already tested packages. Dynamic topography, mobile code.
-Funcionality like authorization, access logging, via intermediaries
-Seperation of concerns, host from application, other Cloud hosting options - less complexity, more expressiveness.
--->
 
 ## REST Applied to Error Handling 
 The [error handler uniform interface][errorhandler] simplifies development and reduces toil by allowing an application to determine where an error is handled via a [generic error handler type][activity].
 
 Expressiveness is achieved via different error handler implementations for different environments and/or use cases such as error logging, echoing errors to stdout, or bypassing error handling.
 
-
-<!--1. Uniform interface - ErrorHandler and logging. loging interface allows expresiveness
-2. Constraints - resource identifier - PkgPath, manipulation through representation, and self descriptive message. http.Request and Http.Response
-[Error handling][errorhandler] [generice type's][loghandler] for implementation.
-Expressiveness through gnerics 
-[Access logging][logger] also has a uniform Log function.  Expressive - Add traffic differentiation, ingress, egress, and internal
--->
 
 ## REST Applied to URLs and Testing
 Uniform interface - Resolver build with configurable templates. Expressiveness - Configurable templates to handle different URL resolution for development envirnment
@@ -44,6 +33,17 @@ URL as a resource
 Treating a URL as a resource, where manipulation of the URL is through a representation, allows for that representation to change based on runtime environment/time. A [resolver type][resolver], provides the representations of a URL, and is the mechanism used to generate file scheme URL (file://) for testing and HTTPS scheme URL (https://) for runtime environments.
 
 <!--
+1. Uniform interface - ErrorHandler and logging. loging interface allows expresiveness
+2. Constraints - resource identifier - PkgPath, manipulation through representation, and self descriptive message. http.Request and Http.Response
+[Error handling][errorhandler] [generice type's][loghandler] for implementation.
+Expressiveness through gnerics 
+[Access logging][logger] also has a uniform Log function.  Expressive - Add traffic differentiation, ingress, egress, and internal
+
+Expressiveness - ability to compose resources/packages from already tested packages. Dynamic topography, mobile code.
+Funcionality like authorization, access logging, via intermediaries
+Seperation of concerns, host from application, other Cloud hosting options - less complexity, more expressiveness.
+
+
 ## REST Uniform Interface, Resource Identifier, & Self-Descriptive Messages
 A key concept of REST is the uniform interface. A [package's][domainservice] HttpHandler implements that uniform interface, uses the http.Request type and allows easy integration with other packages. A package also includes a PkgPath that is used as an identifier for routing and error tracing.
 
