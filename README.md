@@ -2,9 +2,9 @@
 
 Advanced Go is an exercise in creating [a better way to write software][robpike], by extending REST from the service/HTTP layer to the application layer. The following goals are examined when applying REST to packages, error handling, URLs, and testing. <!-- Go is a project to make building production software easier and more productive. -->
 
-1. Reduce complexity
-2. Reduce toil
-3. Increase solution expressiveness   
+1. Reduce complexity and toil
+2. Increase solution expressiveness
+3. Maximize reliability and resiliency
 
  
 ## REST Applied to Packages
@@ -25,6 +25,7 @@ Seperation of concerns, host from application, other Cloud hosting options - les
 
 ## REST Applied to Error Handling 
 The [error handler uniform interface][errorhandler] simplifies development and reduces toil by allowing an application to determine where an error is handled via a [generic error handler type][activity].
+
 Expressiveness is achieved via different error handler implementations for different environments and/or use cases such as error logging, echoing errors to stdout, or bypassing error handling.
 
 
