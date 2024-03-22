@@ -4,7 +4,7 @@ Advanced Go is an exercise in creating [a better way to write software][robpike]
 
 1. Reduce complexity and toil
 2. Increase solution expressiveness
-3. Maximize reliability and autonomous resiliency
+3. Maximize reliability and resiliency
 
  
 ## REST Applied to Packages
@@ -26,11 +26,9 @@ Expressiveness is achieved via different error handler implementations for diffe
 
 
 ## REST Applied to URLs and Testing
-Uniform interface - Resolver build with configurable templates. Expressiveness - Configurable templates to handle different URL resolution for development envirnment
-URL as a resource
+Treating a URL as a resource, where manipulation of the URL is through a representation, allows for that representation to change over time as an application migrates through different development environments. A [resolver type][resolver], provides different representations of a URL and is the mechanism used to resolve URLs for testing, using the file scheme, (file://) and other environments using the HTTP or HTTPS scheme (http://,https://). Runtime configurable templates, used during URL resolution, provide the necessary expresiveness. The use of a uniform [type][resolver], provides simplicity and reduces toil by performing URL resolution with one type, instead of formatting embedded URL strings.
 
 
-Treating a URL as a resource, where manipulation of the URL is through a representation, allows for that representation to change based on runtime environment/time. A [resolver type][resolver], provides the representations of a URL, and is the mechanism used to generate file scheme URL (file://) for testing and HTTPS scheme URL (https://) for runtime environments.
 
 <!--
 1. Uniform interface - ErrorHandler and logging. loging interface allows expresiveness
